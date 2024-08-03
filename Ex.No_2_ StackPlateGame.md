@@ -1,4 +1,4 @@
-# Ex.No: 1  Implementation of Stack Plate game using Queue 
+# Ex.No: 2 Implementation of Stack Plate game using Queue 
 ### DATE:                                                                            
 ### REGISTER NUMBER : 
 ### AIM: 
