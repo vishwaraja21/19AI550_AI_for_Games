@@ -1,4 +1,4 @@
-# Ex.No: 1  Implementation of Snake game using Steering behaviors
+# Ex.No: 4  Implementation of Snake game using Steering behaviors
 ### DATE:                                                                            
 ### REGISTER NUMBER : 
 ### AIM: 
