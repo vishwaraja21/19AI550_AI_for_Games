@@ -1,19 +1,19 @@
-# Ex.No: 4  Implementation of Snake game using Steering behaviors
+# Ex.No: 4  Implementation of Jumping behavior 
 ### DATE:                                                                            
 ### REGISTER NUMBER : 
 ### AIM: 
-To write a python program to simulate the snake game using steering behaviors
+To write a python program to simulate Jumbing behavior. 
 ### Algorithm:
 1. Start the program
 2. Import the necessary modules
 3. Initiate the pygame engine and window
-4. Specify the necessary parameter for background,snake and food
-5. Create a function for seeking behavior towards the target
-6.  Move the snake towards the target by move function
-7.  Increase the size of snake by wrap around function
-8.  create a food at location randomly
-9.  In main, create a game loop, move the snake towards the food,check the collision and increase the size
-10.  Update the display
+4. Specify the necessary parameter for player height,depth,gravity,jump power. 
+5. Create a game loop to simulate the continuous behavior.
+6. If Quit button is pressed then quit the pygame window.
+7. Move the player left when left button is pressed
+8. Move the player right when right button is pressed
+9. If space bar is pressed then enable the jump by increasing y axis value.
+10. land the player and display the player at every timestep
 11.  Stop the program
  ### Program:
 
