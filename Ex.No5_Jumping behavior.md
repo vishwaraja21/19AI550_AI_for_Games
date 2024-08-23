@@ -32,4 +32,4 @@ To write a python program to simulate Jumbing behavior.
 
 
 ### Result:
-Thus the simple snake game was implemented.
+Thus the simple jumping behavior  was implemented.
