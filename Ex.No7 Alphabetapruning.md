@@ -1,4 +1,4 @@
-# Ex.No: 4   Implementation of Alpha Beta Pruning 
+# Ex.No: 7   Implementation of Alpha Beta Pruning 
 ### DATE:                                                                            
 ### REGISTER NUMBER : 
 ### AIM: 
