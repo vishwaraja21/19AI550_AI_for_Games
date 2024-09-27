@@ -1,77 +1,94 @@
-# Ex.No: 5  Implementation of Jumping behavior 
-#### DATE: 23/08/2024                                                                           
+# Ex.No: 4  Implementation of Snake game using Steering behaviors
+
+#### DATE:  22/08/2024      
+
 #### REGISTER NUMBER : 212221220060
+
 ### AIM: 
-To write a python program to simulate Jumbing behavior. 
-### Algorithm:
+To write a python program to simulate the snake game using steering behaviors
+
+### ALGORITHM:
 1. Start the program
 2. Import the necessary modules
 3. Initiate the pygame engine and window
-4. Specify the necessary parameter for player height,depth,gravity,jump power. 
-5. Create a game loop to simulate the continuous behavior.
-6. If Quit button is pressed then quit the pygame window.
-7. Move the player left when left button is pressed
-8. Move the player right when right button is pressed
-9. If space bar is pressed then enable the jump by increasing y axis value.
-10. land the player and display the player at every timestep
+4. Specify the necessary parameter for background,snake and food
+5. Create a function for seeking behavior towards the target
+6.  Move the snake towards the target by move function
+7.  Increase the size of snake by wrap around function
+8.  create a food at location randomly
+9.  In main, create a game loop, move the snake towards the food,check the collision and increase the size
+10.  Update the display
 11.  Stop the program
- ### Program:
-
+    
+ ### PROGRAM:
 ```python
 import pygame
+import random
+
+# Initialize Pygame
 pygame.init()
 
-
+# Screen dimensions
 width, height = 800, 600
 screen = pygame.display.set_mode((width, height))
-pygame.display.set_caption("Simple Jumping with Image")
+pygame.display.set_caption("Wandering Behavior")
 
-
+# Colors
 black = (0, 0, 0)
+white = (255, 255, 255)
 
+# Character properties
+character_size = 20
+x = width // 2
+y = height // 2
+velocity = 2
 
-sprite_image_filename = "C:/Users/navee/Downloads/ai for games/Hedgedog.jpg"
-sprite = pygame.image.load(sprite_image_filename)
-sprite_width, sprite_height = sprite.get_size()
+# Movement directions
+direction_x = random.choice([-1, 1])
+direction_y = random.choice([-1, 1])
 
+# Time to change direction
+change_direction_time = 1000  # in milliseconds
+last_change_time = pygame.time.get_ticks()
 
-player_x = 100
-player_y = height - sprite_height
-player_velocity = 5
-jump_power = -15
-gravity = 1
-is_jumping = False
-vertical_speed = 0
+# Game loop
 running = True
 while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
-    keys = pygame.key.get_pressed()
-    if keys[pygame.K_LEFT]:
-        player_x -= player_velocity
-    if keys[pygame.K_RIGHT]:
-        player_x += player_velocity
-    if not is_jumping:
-        if keys[pygame.K_SPACE]:
-            is_jumping = True
-            vertical_speed = jump_power
-    if is_jumping:
-        player_y += vertical_speed
-        vertical_speed += gravity
-        if player_y >= height - sprite_height:
-            player_y = height - sprite_height
-            is_jumping = False
+
+    # Check if it's time to change direction
+    current_time = pygame.time.get_ticks()
+    if current_time - last_change_time > change_direction_time:
+        direction_x = random.choice([-1, 1])
+        direction_y = random.choice([-1, 1])
+        last_change_time = current_time
+
+    # Update character position
+    x += direction_x * velocity
+    y += direction_y * velocity
+
+    # Boundaries check
+    if x < 0 or x > width - character_size:
+        direction_x *= -1
+    if y < 0 or y > height - character_size:
+        direction_y *= -1
+
+    # Clear screen
     screen.fill(black)
-    screen.blit(sprite, (player_x, player_y))
+
+    # Draw character
+    pygame.draw.rect(screen, white, (x, y, character_size, character_size))
+
+    # Update display
     pygame.display.flip()
+
+    # Frame rate
     pygame.time.delay(30)
 
+# Quit Pygame
 pygame.quit()
-
-
-
-
 ```
 
 
@@ -79,10 +96,14 @@ pygame.quit()
 
 
 
-### Output:
-
-![5output](https://github.com/user-attachments/assets/032f4edd-0166-4fe2-b2ab-fcd4d0ad33f9)
 
 
-### Result:
-Thus the simple jumping behavior  was implemented.
+
+
+### OUTPUT:
+![360553447-acac70b0-9a6e-4200-a2ac-ae7f01e43a6d](https://github.com/user-attachments/assets/2f07543c-a8be-45e4-bf08-bad5c5d2ae97)
+
+
+
+### RESULT:
+Thus the simple HotPotato game was implemented using Queue.
