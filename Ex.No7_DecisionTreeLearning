@@ -3,12 +3,11 @@ DATE:
 REGISTER NUMBER :
 AIM:
 Design a decision tree for following data. 
-Data: [Health, Cover, Ammo, Exposed]
-# Health: 1 for Healthy, 0 for Hurt
-# Cover: 1 for In Cover, 0 for Exposed
-# Ammo: 1 for With Ammo, 0 for Empty
-# Exposed: 1 for Exposed, 0 for In Cover
-# Actions: 0 for Defend, 1 for Attack
+ Healthy, In Cover, With Ammo -> Attack
+Hurt, In Cover, With Ammo -> Attack
+Healthy, In Cover, Empty -> Defend
+Hurt, In Cover, Empty -> Defend
+Hurt, Exposed, With Ammo -> Defend
 Algorithm:
 1. Start the program
 2. import the necessary packages 
