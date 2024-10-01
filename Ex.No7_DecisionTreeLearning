@@ -1,0 +1,31 @@
+Ex.No: 7 Implementation of Decision Tree Learning 
+DATE:
+REGISTER NUMBER :
+AIM:
+Design a decision tree for following data. 
+Data: [Health, Cover, Ammo, Exposed]
+# Health: 1 for Healthy, 0 for Hurt
+# Cover: 1 for In Cover, 0 for Exposed
+# Ammo: 1 for With Ammo, 0 for Empty
+# Exposed: 1 for Exposed, 0 for In Cover
+# Actions: 0 for Defend, 1 for Attack
+Algorithm:
+1. Start the program
+2. import the necessary packages 
+3. Design a training data and test data 
+4. Create a decision tree classifier model
+5. Output the predictions 
+6. Visualize the decision tree 
+Program:
+
+
+
+
+
+
+Output:
+
+
+
+Result:
+Thus the optimum value of max player was found using minimax search.
