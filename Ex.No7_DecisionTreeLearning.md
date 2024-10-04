@@ -26,5 +26,5 @@ Design a decision tree for following data.
 
 
 
-#Result:
+# Result:
 Thus the optimum value of max player was found using minimax search.
