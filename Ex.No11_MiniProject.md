@@ -442,4 +442,4 @@ pygame.quit()
 
 ### Result:
 
-The 2D fighting game was successfully developed using Python and Pygame. The game allows the player character to engage AI-controlled enemies with animated actions, health bars, scoring, and respawn mechanics. The game ends with a "Game Over" screen displaying the final score, providing an interactive and visually appealing gameplay experience.
+The 2D Shooting game was successfully developed using Python and Pygame. The game allows the player character to engage AI-controlled enemies with animated actions, health bars, scoring, and respawn mechanics. The game ends with a "Game Over" screen displaying the final score, providing an interactive and visually appealing gameplay experience.
