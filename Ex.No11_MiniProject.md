@@ -437,7 +437,7 @@ pygame.quit()
 ### Output:
 ![image](https://github.com/user-attachments/assets/d8d5f686-4aa9-46a5-a191-90c227712430)
 ![image](https://github.com/user-attachments/assets/c67f9334-97d6-4ef1-ae0d-97110c734956)
-![BG1](https://github.com/user-attachments/assets/4c7660b0-38be-4411-a20e-ecfb2bc5c379)
+
 
 
 ### Result:
